@@ -1,3 +1,5 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -47,9 +49,14 @@ table {
 	border-spacing: 0;
 }
 
+
+
+
 *, *::before, *::after{
  box-sizing: border-box;
 }
+
+
 
 body{
 font-family: "Noto Sans TC", sans-serif;
@@ -63,11 +70,106 @@ a{
   text-decoration: none;
 }
 
-.container{
-width: 1296px;
-margin: 0 auto;
-padding: 0 12px;
+
+h1{
+    font-size: 120px;
+    font-weight: 900;
 }
+
+h2{
+    font-size: 32px;
+}
+
+
+img{
+    width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+.container{
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 12px;
+}
+
+
+.menu{
+    display: flex;
+    justify-content: center;
+
+    li a{
+        display: inline-block;
+        padding: 24px 20px;
+        color: #000;
+        font-size: 28px;
+        font-weight: 700;
+        line-height: 1.5;
+        
+    }
+}
+
+.menu a:hover {
+  color: blue;
+}
+
+.cover{
+    display: flex; 
+}
+
+.cover-box1{
+    width: 50%;
+    }
+
+.cover-box2{
+    width: 50%;
+    
+    .content{
+        margin-left: 80px;
+        color: #0027D5;
+    }
+}
+
+.article{
+    display: flex;
+}
+
+.article-head,
+.article-body{
+    width: calc((100% - 24px )/2);
+}
+
+.article-body{
+    display: flex;
+    align-items: center;
+    padding: 0px 24px;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    max-width: 636px;
+    gap: 8px;
+}
+
+
+.search{
+    max-width: 1296px;
+    padding-top: 80px;
+    width: 100%;
+}
+
+.search-input{
+    display: flex;
+    align-items: center;
+    max-width: 416px;
+    padding: 16px;
+    border: 1px solid #4B4B4B;
+    border-radius: 100px;
+    gap: 10px;
+}
+
+
 
 .list{
 display: flex;
@@ -77,7 +179,13 @@ gap: 80px 24px;
 
 .card{
 width: 30%;
+padding-top: 40px;
 }
+
+.card-head {
+    width: 100%;
+}
+
 .card-body{
 margin-top: 8px;
 }
@@ -87,12 +195,12 @@ margin-top: 8px;
     height: auto;
 }
 
-.card .hashtag{
+.hashtag{
     color: blue;
     font-size: 24px;
     margin-right: 8px;
 }
-.card .tag{
+.tag{
     color: white;
     background-color: blue;
     font-size: 16px;
@@ -100,25 +208,30 @@ margin-top: 8px;
     border: 1px solid blue;
     border-radius: 40px;
 }
-.card .tag:hover {
+.tag:hover {
   color: white;
   background-color: red;
   border: 1px solid red;
 }
 
-.card .title{
+.title{
     font-size: 28px;
     font-weight: bold;
 }
-.card .text{
+.text{
     font-size: 16px;
     width: 100%; 
     margin-bottom: 8px;
+}
+
+
+p{
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
+
 
 .btn{
     color: black;
@@ -134,4 +247,158 @@ margin-top: 8px;
 .tags{
   display: flex;
   align-items: center;
+}
+
+
+.page{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 1296px;
+    padding-bottom: 80px;
+
+}
+
+.page-input {
+    display: flex;
+    justify-content: center;
+    max-width: 328px;
+    background-color: #fff;
+    padding: 8px 20px;
+    border-radius: 100px;
+}
+
+.page li {
+    width: 40px;
+    line-height: 40px;
+    text-align: center;
+
+}
+
+.bottom{
+    border-top: 1px solid #000;
+    
+}
+
+.info{
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1296px;
+    padding: 80px 0px;
+    gap: 0px 24px;
+
+    
+}
+
+.email{
+    margin-right: 24px;
+
+}
+
+.social-icon {
+    display: flex;
+    justify-content: space-between;
+}
+
+.social-icon li {
+    width: 44px;
+    height: 44px;
+
+}
+
+.footer{
+    text-align: center;
+    width: 100%;
+    padding: 24px 0px;
+}
+
+
+@media (max-width: 767px) {
+ 
+    .h1 {
+       font-size: 52px; 
+    }
+    
+         
+    /* 封面人物 */
+
+            .cover {
+                flex-direction: column;
+                height: auto;
+            }
+
+            .cover-box1 {
+                width: 100%;
+            }
+
+            .cover-box2 {
+                width: 100%;
+                padding: 24px;
+            }
+
+            .cover-box2 .content {
+                margin-left: 0px;
+            } 
+
+    /* 主要文章 */
+
+            .article {
+                 flex-direction: column;
+            }
+
+            .article-head {
+                width: 100%;
+                
+            }
+
+            .article-body {
+                width: 100%;
+                padding: 48px 12px;
+            }
+
+    /* 搜尋bar */
+
+            .search-input {
+                margin: 0 auto;
+                
+            }
+            
+    /* 文章列表 */
+
+           .cards {
+                width: 100%;
+            }
+
+            .list {
+
+                 justify-content: center;
+                 gap: 32px;
+            }
+
+            .card {
+                 width: 100%;
+            }
+
+    /* 頁面列表 */
+
+             .page {
+                padding-bottom: 64px;
+            }
+
+            
+    /* 聯絡方式 */
+
+             .bottom {
+                display: none;
+            }
+
+    /* 版權所有 */
+
+             .footer {
+               border-top: 1px solid #000;
+            }
+
+            
 }
